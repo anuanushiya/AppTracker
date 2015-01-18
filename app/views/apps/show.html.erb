@@ -3,3 +3,4 @@
 <p>Location: <%= @app.location %></p>
 <p>Description: <%= @app.description %></p>
 <p>Reference: <%= @app.reference %></p>
+<p>This app was deployed by <%= @app.deploy.platform_used %> on <%= @app.deploy.deployment_date %> with the name of <%= @app.deploy.deployed_name %></p>
