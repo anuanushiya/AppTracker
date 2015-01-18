@@ -8,6 +8,14 @@ Location: <%= x.text_field :location %><br>
 Description: <%= x.text_field :description %><br>
 Reference: <%= x.text_field :reference %><br>
 
+Deployment Info: <%= x.fields_for :deploy do |origin_form| %><br>
+Platform Name: <%= origin_form.text_field :platform_used %><br>
+Deployment Date: <%= origin_form.date_field :deployment_date %><br>
+Deployed Name: <%= origin_form.text_field :deployment_date %><br>
+
+<% end %>
+
+
 <%= x.submit "Add File" %>
 
 <% end %>

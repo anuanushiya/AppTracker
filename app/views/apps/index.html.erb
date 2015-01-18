@@ -4,6 +4,7 @@
 
 <% @apps.each do |app| %>
 <h4>File Name: <%= app.file_name %></h4><br>
+<%= link_to "File Details", app_path(app) %>
 
 <% end %>
 

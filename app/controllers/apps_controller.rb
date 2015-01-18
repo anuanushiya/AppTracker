@@ -6,6 +6,7 @@ class AppsController < ApplicationController
 
 	def new
 		@app = App.new
+		@app.deploy = Deploy.new()
 	end
 
 	def create 
