@@ -1,0 +1,9 @@
+<header>My App Files</header>
+
+<%= link_to "Add a new file", new_app_path %>
+
+<% @apps.each do |app| %>
+<h4>File Name: <%= app.file_name %></h4><br>
+
+<% end %>
+

@@ -1,0 +1,27 @@
+class AppsController < ApplicationController
+	
+	def index
+		@apps = App.all  
+	end
+
+	def new
+		@app = App.new
+	end
+
+	def create 
+		@app = App.new(params.require(:app).permit(:file_name, :date_created, :location, :description, :reference))
+
+		if @app.save
+			redirect to apps_path
+		else
+			render :new
+		end
+	end
+
+	def show 
+		@app = App.find(params[:id])
+	end
+
+
+
+end

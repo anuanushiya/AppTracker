@@ -1,0 +1,13 @@
+<header>Add a New File</header>
+
+<%= form_for @app do |x| %>
+
+File Name: <%= x.text_field :file_name %><br>
+Date Created: <%= x.date_field :date_created %><br>
+Location: <%= x.text_field :location %><br>
+Description: <%= x.text_field :description %><br>
+Reference: <%= x.text_field :reference %><br>
+
+<%= x.submit "Add File" %>
+
+<% end %>
