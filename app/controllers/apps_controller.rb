@@ -37,6 +37,12 @@ class AppsController < ApplicationController
 		end
 	end
 
+	def destroy
+		@app = App.find(params[:id]) 
+		@app.destroy
+		redirect_to apps_path
+	end
+
 
 
 end

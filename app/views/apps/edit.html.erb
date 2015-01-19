@@ -13,8 +13,10 @@
 
     <% end %>
 
-    <%= x.submit "Edit File" %>
+    <%= x.submit "Edit File" %><br>
 
     <% end %>
+
+    <%= link_to "Delete this file", :app, method: :delete, data: {confirm: "Are you sure you want to delete this file information?"} %>
 
 
