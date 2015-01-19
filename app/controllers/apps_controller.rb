@@ -2,7 +2,7 @@ class AppsController < ApplicationController
 
 	before_action :authorize
 	def index
-		@apps = App.all  
+		@apps = App.where(user_id: current_user.id)  
 	end
 
 	def new
@@ -13,6 +13,7 @@ class AppsController < ApplicationController
 	def create 
 		@app = App.new(params.require(:app).permit(:file_name, :date_created, :location, :description, :reference))
 		@app.deploy = Deploy.new(params.require(:app).require(:deploy_attributes).permit(:platform_used, :deployment_date, :deployed_name))
+		@app.user = current_user
 
 		if @app.save
 			redirect_to apps_path
