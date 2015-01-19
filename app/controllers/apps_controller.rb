@@ -1,5 +1,6 @@
 class AppsController < ApplicationController
-	
+
+	before_action :authorize
 	def index
 		@apps = App.all  
 	end

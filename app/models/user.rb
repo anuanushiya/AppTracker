@@ -12,5 +12,7 @@ class User
   validates :email, uniqueness: true
   validates :password_digest, uniqueness: true
 
+  has_many :apps
+
   has_secure_password
 end

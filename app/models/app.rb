@@ -12,6 +12,8 @@ class App
   validates :file_name, uniqueness: true
   validates :location, presence: true
 
+  belongs_to :user
+
   embeds_one :deploy
   accepts_nested_attributes_for :deploy
 
