@@ -1,0 +1,12 @@
+<header>Welcome to AppTracker</header>
+
+<h1>Sign up free to use this site!</h1>
+
+<%= form_for :user do |f| %>
+Name: <%= f.text_field :name %><br>
+Email: <%= f.text_field :email %><br>
+Password: <%= f.password_field :password %><br>
+Please confirm your password:</u> <%= f.password_field :password_confirmation %><br></br>
+<%= f.submit "Sign Up" %>
+
+<% end %>

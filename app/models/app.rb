@@ -9,6 +9,7 @@ class App
   field :reference, type: String
 
   validates :file_name, presence: true
+  validates :file_name, uniqueness: true
   validates :location, presence: true
 
   embeds_one :deploy
