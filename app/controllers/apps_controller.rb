@@ -6,8 +6,8 @@ class AppsController < ApplicationController
 	  	@apps = App.where(file_name: params[:search], user_id: current_user.id)
 
 	  else 
-	  	
-		@apps = App.where(user_id: current_user.id) 
+
+		@apps = App.where(user_id: current_user.id).order(file_name: :asc) 
 	  end 
 	end
 
