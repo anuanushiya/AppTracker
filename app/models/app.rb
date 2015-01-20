@@ -8,7 +8,7 @@ class App
   field :description, type: String
   field :reference, type: String
 
-  validates :file_name, presence: true
+  validates :file_name, presence: true  
   validates :file_name, uniqueness: true
   validates :location, presence: true
 
