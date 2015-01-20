@@ -3,9 +3,9 @@ class AppsController < ApplicationController
 	before_action :authorize
 	def index
 	  if params[:search] && params[:search].strip !=""
-	  	@apps = App.where(file_name: params[:search])
+	  	@apps = App.where(file_name: params[:search], user_id: current_user.id)
 
-	  elsif 
+	  else 
 		@apps = App.where(user_id: current_user.id) 
 	  end 
 	end
