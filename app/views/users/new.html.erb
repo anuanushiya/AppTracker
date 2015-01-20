@@ -1,5 +1,7 @@
 <header>Welcome to AppTracker</header>
 
+<%= @user.errors.full_messages %><br>
+
 <h1>Sign up free to use this site!</h1>
 
 <%= form_for :user, url: "/signup" do |f| %>

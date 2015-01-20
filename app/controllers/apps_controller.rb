@@ -6,6 +6,7 @@ class AppsController < ApplicationController
 	  	@apps = App.where(file_name: params[:search], user_id: current_user.id)
 
 	  else 
+	  	
 		@apps = App.where(user_id: current_user.id) 
 	  end 
 	end

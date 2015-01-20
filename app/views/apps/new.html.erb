@@ -1,5 +1,7 @@
 <header>Add a New File</header>
 
+<%= @app.errors.full_messages %><br>
+
 <%= form_for @app do |x| %>
 
 File Name: <%= x.text_field :file_name %><br>
@@ -19,3 +21,5 @@ Deployed Name: <%= origin_form.text_field :deployed_name %><br>
 <%= x.submit "Add File" %>
 
 <% end %>
+
+ <%= link_to "Back to App List", apps_path %>
