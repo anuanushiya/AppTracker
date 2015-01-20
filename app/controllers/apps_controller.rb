@@ -2,7 +2,12 @@ class AppsController < ApplicationController
 
 	before_action :authorize
 	def index
-		@apps = App.where(user_id: current_user.id)  
+	  if params[:search] && params[:search].strip !=""
+	  	@apps = App.where(file_name: params[:search])
+
+	  elsif 
+		@apps = App.where(user_id: current_user.id) 
+	  end 
 	end
 
 	def new

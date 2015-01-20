@@ -1,6 +1,11 @@
 <header>My App Files</header>
 
-<%= link_to "Add a new file", new_app_path %>
+<%= link_to "Add a new file", new_app_path %><br>
+
+<%= form_tag('/apps', method:"get") do %>
+Search a file by name: <%= text_field_tag :search %>
+<%= submit_tag "Search" %>
+<% end %>
 
 <% @apps.each do |app| %>
 <h4>File Name: <%= app.file_name %></h4><br>
