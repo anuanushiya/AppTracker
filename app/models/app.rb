@@ -8,9 +8,9 @@ class App
   field :description, type: String
   field :reference, type: String
 
-  validates :file_name, presence: true  
-  validates :file_name, uniqueness: true
-  validates :location, presence: true
+  validates :file_name, presence: {message: "field must be filled in"}  
+  validates :file_name, uniqueness: {message: "already taken"}
+  validates :location, presence: {message: "field must be filled in"}
 
   belongs_to :user
 

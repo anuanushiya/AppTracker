@@ -7,10 +7,10 @@ class User
   field :email, type: String
   field :password_digest, type: String
 
-  validates :name, presence: true
-  validates :email, presence: true
-  validates :email, uniqueness: true
-  validates :password_digest, uniqueness: true
+  validates :name, presence: {message: "field must be filled in"}
+  validates :email, presence: {message: "field must be filled in"}
+  validates :email, uniqueness: {message: "belongs to another user"}
+  validates :password_digest, uniqueness: {message: "belongs to another user"}
   validates :password, length: {minimum: 6}
 
 

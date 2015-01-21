@@ -1,5 +1,6 @@
 <h1>Login</h1>
 
+<%= @errors if @errors %><br><br>
 <%= form_for :user do |f| %>
 
 	Email: <%= f.text_field :email %><br>

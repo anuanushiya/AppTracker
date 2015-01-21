@@ -1,6 +1,8 @@
 <header>Add a New File</header>
 
+<% if @app.errors.any? %>
 <%= @app.errors.full_messages %><br>
+<% end %>
 
 <%= form_for @app do |x| %>
 

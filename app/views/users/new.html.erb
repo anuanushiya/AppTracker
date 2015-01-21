@@ -1,6 +1,8 @@
 <header>Welcome to AppTracker</header>
 
+<% if @user.errors.any? %>
 <%= @user.errors.full_messages %><br>
+<% end %>
 
 <h1>Sign up free to use this site!</h1>
 
