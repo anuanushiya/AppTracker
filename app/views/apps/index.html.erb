@@ -9,6 +9,7 @@ Search a file by name: <%= text_field_tag :search %>
 
 <% @apps.each do |app| %>
 <h4>File Name: <%= app.file_name %></h4><br>
+<h4>Description: <%= app.description %></h4>
 <%= link_to "File Details", app_path(app) %><br>
  
 

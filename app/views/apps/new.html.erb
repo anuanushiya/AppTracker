@@ -9,8 +9,8 @@
 File Name: <%= x.text_field :file_name %><br>
 Date Created: <%= x.date_field :date_created %><br>
 Location: <%= x.text_field :location %><br>
-Description: <%= x.text_field :description %><br>
-Reference: <%= x.text_field :reference %><br>
+Description: <%= x.text_area :description %><br>
+Reference: <%= x.text_area :reference %><br>
 
 Deployment Info: <%= x.fields_for :deploy do |origin_form| %><br>
 Platform Name: <%= origin_form.text_field :platform_used %><br>
