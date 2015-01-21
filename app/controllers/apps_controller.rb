@@ -3,11 +3,12 @@ class AppsController < ApplicationController
 	before_action :authorize
 	def index
 	  if params[:search] && params[:search].strip !=""
-	  	@apps = App.where(file_name: params[:search], user_id: current_user.id)
+	  	@apps = App.where(file_name: Regexp.new(".*#{params[:search]}.*", Regexp::IGNORECASE), user_id: current_user.id)
 
 	  else 
 
-		@apps = App.where(user_id: current_user.id).order(file_name: :asc) 
+
+		@apps = App.where(user_id: current_user.id).order(date_created: :desc) 
 	  end 
 	end
 
