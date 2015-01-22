@@ -40,7 +40,7 @@ class AppsController < ApplicationController
 	def update
 		@app = App.find(params[:id])
 		if @app.update_attributes(params.require(:app).permit(:file_name, :date_created, :location, :description, :reference)) && @app.deploy.update_attributes(params.require(:app).require(:deploy_attributes).permit(:platform_used, :deployment_date, :deployed_name))
-			redirect_to apps_path
+			redirect_to app_path(@app)
 		else
 			render "edit"
 		end
