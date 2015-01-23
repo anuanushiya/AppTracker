@@ -1,10 +1,15 @@
-
-
 <% if @user.errors.any? %>
 <%= @user.errors.full_messages %><br>
 <% end %>
 
-<h1>Sign up free to use this site!</h1>
+<body id="users-new">
+<h1 class="text-center title"><b class="apptracker">AppTracker</b>, the tool every developer should have!</h1>
+
+<h3 class="welcome">Welcome to AppTracker, the tool that helps you keep track of your application files from creation to deployment!</h3 >
+
+
+<div class="sign-up">
+<h1 id="sign-uph1">Sign up free to use this site!</h1>
 
 <%= form_for :user, url: "/signup" do |f| %>
 Name: <%= f.text_field :name %><br>
@@ -14,3 +19,5 @@ Please confirm your password: <%= f.password_field :password_confirmation %><br>
 <%= f.submit "Sign Up" %>
 
 <% end %>
+</div>
+</body>
