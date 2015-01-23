@@ -1,14 +1,25 @@
 <body class="login-body">
 
-<h1 class="text-center loginh1">Login</h1>
+<h1 class="loginh1">Welcome Back!</h1><br><br>
+<h2 class="loginh2">Login</h2>
 
-<%= @errors if @errors %><br><br>
+
+<div class="login-box">
+<div class="form-group">
+<% flash.each do |key, value| %>
+    <div class="alert alert-danger flash" role="alert">
+      <%= value %>
+    </div>
+  <% end %>
 <%= form_for :user do |f| %>
 
-	Email: <%= f.text_field :email %><br>
-	Password: <%= f.password_field :password %><br>
-	<%= f.submit "Login" %>
+	<%= f.text_field :email, class: 'form-control login-form', placeholder: 'enter your email' %><br>
+	<%= f.password_field :password, class: 'form-control login-form', placeholder: 'password' %><br>
+	<%= button_tag(type: 'submit', class: "btn btn-primary btn-login") do %>
+<p class="submit-login">Log Me In!</p>
+<% end %>
 
 	<% end %>
-
+	</div>
+</div>
 </body>

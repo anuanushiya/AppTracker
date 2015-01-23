@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
 			session[:user_id] = user.id
 			redirect_to apps_path
 		else
-			@errors = "invalid email or password"
+			flash.now[:danger] = "invalid email or password"
 			render :new
 		end
 	end
