@@ -1,6 +1,6 @@
 <h1><%= @app.file_name %></h1>
 <% if @app.date_created %>
-<p>Date Created: <%= @app.date_created.strftime("%-m-%-d-%Y") if @app.date_created  %></p>
+<p>Date Created: <%= @app.date_created.strftime("%-m-%-d-%Y") %></p>
 <% end %>
 <% if @app.location %>
 <p>Location: <%= @app.location %></p>
@@ -15,7 +15,7 @@
 <p>Deployment Platform: <%= @app.deploy.platform_used %></p> 
 <% end %>
  <% if @app.deploy.deployment_date %>
-<p>Deployed on: <%= @app.deploy.deployment_date %></p> 
+<p>Deployed on: <%= @app.deploy.deployment_date.strftime("%-m-%-d-%Y") %></p> 
 <% end %>
 <% if @app.deploy.deployed_name !="" %>
 <p>Deployed App Name: <%= @app.deploy.deployed_name %></p><br>
