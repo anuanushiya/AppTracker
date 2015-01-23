@@ -15,7 +15,7 @@ Reference: <%= x.text_area :reference %><br>
 Deployment Info: <%= x.fields_for :deploy do |origin_form| %><br>
 Platform Name: <%= origin_form.text_field :platform_used %><br>
 Deployment Date: <%= origin_form.date_field :deployment_date %><br>
-Deployed Name: <%= origin_form.text_field :deployed_name %><br>
+Deployed App Link: <%= origin_form.text_field :deployed_name %><br>
 
 <% end %>
 
