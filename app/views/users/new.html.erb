@@ -2,22 +2,28 @@
 <%= @user.errors.full_messages %><br>
 <% end %>
 
-<body id="users-new">
+<body class="users-new">
 <h1 class="text-center title"><b class="apptracker">AppTracker</b>, the tool every developer should have!</h1>
 
+<div id="welcome-div">
 <h3 class="welcome">Welcome to AppTracker, the tool that helps you keep track of your application files from creation to deployment!</h3 >
+</div>
 
 
 <div class="sign-up">
 <h1 id="sign-uph1">Sign up free to use this site!</h1>
 
 <%= form_for :user, url: "/signup" do |f| %>
-Name: <%= f.text_field :name %><br>
-Email: <%= f.text_field :email %><br>
-Password: <%= f.password_field :password %><br>
-Please confirm your password: <%= f.password_field :password_confirmation %><br></br>
-<%= f.submit "Sign Up" %>
+<div class="form-group">
+<%= f.text_field :name, class: 'form-control', placeholder: 'enter your name' %><br>
+<%= f.text_field :email, class: 'form-control', placeholder: 'enter your email' %><br>
+<%= f.password_field :password, class: 'form-control', placeholder: 'password' %><br>
+<%= f.password_field :password_confirmation, class: 'form-control', placeholder: 'confirm your password' %><br></br>
+<%= button_tag(type: 'submit', class: "btn btn-primary") do %>
+<p class="submit-signup">Sign Me Up!</p>
+<% end %>
 
 <% end %>
+</div>
 </div>
 </body>
