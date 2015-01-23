@@ -7,11 +7,13 @@
 <h3 class="welcome">Welcome to AppTracker, the tool that helps you keep track of your application files from creation to deployment!</h3 >
 </div>
 
-<div class="alert alert-danger error" role="alert">
+
 <% if @user.errors.any? %>
+<div class="alert alert-danger error" role="alert">
 <%= @user.errors.full_messages.to_sentence %><br>
-<% end %>
 </div>
+<% end %>
+
 
 <div class="sign-up">
 <h1 id="sign-uph1">Sign up free to use this site!</h1>
