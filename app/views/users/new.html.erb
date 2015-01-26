@@ -22,10 +22,10 @@
 
 <%= form_for :user, url: "/signup" do |f| %>
 <div class="form-group">
-<%= f.text_field :name, class: 'form-control', placeholder: 'enter your name' %><br>
-<%= f.text_field :email, class: 'form-control', placeholder: 'enter your email' %><br>
-<%= f.password_field :password, class: 'form-control', placeholder: 'password' %><br>
-<%= f.password_field :password_confirmation, class: 'form-control', placeholder: 'confirm your password' %><br></br>
+<%= f.text_field :name, class: 'form-control sign-form', placeholder: 'enter your name' %><br>
+<%= f.text_field :email, class: 'form-control sign-form', placeholder: 'enter your email' %><br>
+<%= f.password_field :password, class: 'form-control sign-form', placeholder: 'password' %><br>
+<%= f.password_field :password_confirmation, class: 'form-control sign-form', placeholder: 'confirm your password' %><br></br>
 <%= button_tag(type: 'submit', class: "btn btn-primary") do %>
 <p class="submit-signup">Sign Me Up!</p>
 <% end %>

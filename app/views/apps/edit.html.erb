@@ -1,23 +1,40 @@
-<header>Edit this file</header>
+<body class="edit-body">
+
+<div class="edit-box">
+<h1 class="edith1">Edit this file</h1>
 
 <%= form_for @app do |x| %>
-	File Name: <%= x.text_field :file_name %><br>
-	Date Created: <%= x.date_field :date_created %><br>
-	Location: <%= x.text_field :location %><br>
-	Description: <%= x.text_field :description %><br>
-	Reference: <%= x.text_field :reference %><br>
-    Deployment Info: <%= x.fields_for :deploy do |origin_form| %><br>
-    Platform Name: <%= origin_form.text_field :platform_used %><br>
-    Deployment Date: <%= origin_form.date_field :deployment_date %><br>
-    Deployed App Link: <%= origin_form.text_field :deployed_name %><br>
+    <%= x.text_field :file_name, class: 'form-control edit-field', placeholder: 'file name' %>
+	<%= x.date_field :date_created, class: 'form-control edit-field', placeholder: 'date created' %>
+    <%= x.text_field :location, class: 'form-control edit-field', placeholder: 'file location' %>
+    <%= x.text_area :description, class: 'form-control edit-field', placeholder: 'description' %>
+    <%= x.text_area :reference, class: 'form-control edit-field', placeholder: 'reference' %>
+	<%= x.fields_for :deploy do |origin_form| %>
+    <h2 class="edith2">Deployment Info: </h2>
+    <%= origin_form.text_field :platform_used, class: 'form-control edit-field', placeholder: 'platform used to deploy' %>
+    <%= origin_form.date_field :deployment_date, class: 'form-control edit-field', placeholder: 'date deployed' %>
+    <%= origin_form.text_field :deployed_name, class: 'form-control edit-field', placeholder: 'deployed app link' %><br>
 
     <% end %>
 
-    <%= x.submit "Edit File" %><br>
+  <%= button_tag(type: 'submit', class: "btn btn-default new-button") do %>
+            <p>Edit File</p>
+            <% end %>
 
     <% end %>
+    <br><div class="edit-end">
+    <%= link_to "Delete this file", :app, method: :delete, data: {confirm: "Are you sure you want to delete this file information?"}, class: "btn btn-danger edit-button" %>
+     <%= link_to "Back to App List", apps_path, class: "btn btn-success edit-button" %>
+     </div>
+</div>
 
-    <%= link_to "Delete this file", :app, method: :delete, data: {confirm: "Are you sure you want to delete this file information?"} %>
-     <%= link_to "Back to App List", apps_path, class: "btn btn-success" %>
+</body>
+
+
+
+
+
+
+
 
 

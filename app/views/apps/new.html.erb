@@ -1,19 +1,20 @@
 <body class="addapp-body">
 
+	
 	<h1 class="addapph1">Add a New File</h1>
 
 	
 
 	<%= form_for @app do |x| %>
 
-	<div class="form-group">
+	
 		
-
+     <div class="form-group">
 		<div class="first-line">
 		
-			<%= x.text_field :file_name, class: 'form-control', placeholder: 'file name' %><br>
-			<%= x.date_field :date_created, class: 'form-control', placeholder: 'date created' %><br>
-			<%= x.text_field :location, class: 'form-control', placeholder: 'file location' %><br><br>
+			<%= x.text_field :file_name, class: 'form-control sign-form', placeholder: 'file name' %><br>
+			<%= x.date_field :date_created, class: 'form-control sign-form', placeholder: 'date created' %><br>
+			<%= x.text_field :location, class: 'form-control sign-form', placeholder: 'file location' %><br><br>
 		</div><br>
 		<div class="second-line">
 			<%= x.text_area :description, class: 'form-control text_area', placeholder: 'description' %><br>
@@ -23,9 +24,9 @@
 		<%= x.fields_for :deploy do |origin_form| %><br>
 		<div class="third-line">
 			<h2 class="appnewh2">Deployment Info: </h2><br>
-			<%= origin_form.text_field :platform_used, class: 'form-control', placeholder: 'platform used to deploy' %><br>
-			<%= origin_form.date_field :deployment_date, class: 'form-control', placeholder: 'date deployed' %><br>
-			<%= origin_form.text_field :deployed_name, class: 'form-control', placeholder: 'deployed app link' %><br>
+			<%= origin_form.text_field :platform_used, class: 'form-control sign-form', placeholder: 'platform used to deploy' %><br>
+			<%= origin_form.date_field :deployment_date, class: 'form-control sign-form', placeholder: 'date deployed' %><br>
+			<%= origin_form.text_field :deployed_name, class: 'form-control sign-form', placeholder: 'deployed app link' %><br>
 		</div>
 
 		<% end %>

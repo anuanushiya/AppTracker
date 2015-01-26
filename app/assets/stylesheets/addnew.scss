@@ -1,8 +1,14 @@
 .addapp-body {
-	background-color: #82CAFF;
+  background: url('file-cabinets.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
-
+.new-box {
+	background-color: #82CAFF;
+}
 
 .addapph1 {
 	text-decoration: underline;
@@ -10,7 +16,8 @@
 	font-size: 60px;
 	position: absolute;
 	left: 30%;
-	text-shadow: 2px 2px 0px gold;
+	color: gold;
+	text-shadow: 2px 2px 0px black;
 }
 
 .first-line {
@@ -42,9 +49,9 @@
 	font-size: 35px;
 	text-decoration: underline;
 	font-family: cursive;
-	text-shadow: 2px 2px 0px gold;
+	text-shadow: 2px 2px 0px black;
 	font-weight: bold;
-
+	color: gold;
 }
 
 .end-form {
