@@ -24,10 +24,10 @@
 		<p class="text-center show-info"><u class="show-label">App Link:</u> <%= link_to @app.deploy.deployed_name %></p><br>
 		<% end %><br>
 		<div class="buttons-box">
-		<%= link_to "Edit this file", edit_app_path, class: "btn btn-primary show-buttons" %>
+			<%= link_to "Edit this file", edit_app_path, class: "btn btn-primary show-buttons" %>
 
-		<%= link_to "Delete this file", :app, method: :delete, data: {confirm: "Are you sure you want to delete this file information?"}, class: "btn btn-danger show-buttons" %>
-		<%= link_to "Back to App List", apps_path, class: "btn btn-success show-buttons" %>
+			<%= link_to "Delete this file", :app, method: :delete, data: {confirm: "Are you sure you want to delete this file information?"}, class: "btn btn-danger show-buttons" %>
+			<%= link_to "Back to App List", apps_path, class: "btn btn-success show-buttons" %>
 		</div>
 	</div>
 
