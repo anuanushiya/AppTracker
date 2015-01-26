@@ -12,7 +12,7 @@
 		<p class="text-center show-info"><u class="show-label">Description:</u> <%= @app.description %></p>
 		<% end %><br>
 		<% if @app.reference !="" %>
-		<p class="text-center show-info"><u class="show-label">Reference:</u> <%= link_to @app.reference %></p>
+		<p class="text-center show-info"><u class="show-label">Reference:</u> <%= link_to @app.reference, @app.reference  %></p>
 		<% end %><br>
 		<% if @app.deploy.platform_used !="" %> 
 		<p class="text-center show-info"><u class="show-label">Deployment Platform:</u> <%= @app.deploy.platform_used %></p> 
@@ -21,7 +21,7 @@
 		<p class="text-center show-info"><u class="show-label">Deployed on:</u> <%= @app.deploy.deployment_date.strftime("%-m-%-d-%Y") %></p> 
 		<% end %><br>
 		<% if @app.deploy.deployed_name !="" %>
-		<p class="text-center show-info"><u class="show-label">App Link:</u> <%= link_to @app.deploy.deployed_name %></p><br>
+		<p class="text-center show-info"><u class="show-label">App Link:</u> <%= link_to @app.deploy.deployed_name, @app.deploy.deployed_name %></p><br>
 		<% end %><br>
 		<div class="buttons-box">
 			<%= link_to "Edit this file", edit_app_path, class: "btn btn-primary show-buttons" %>
