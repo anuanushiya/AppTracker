@@ -1,3 +1,73 @@
 .index-body {
+	background: url('file-cabinets.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+
+.index-box {
+	border: 10px solid black;
+	width: 48%;
+	position: absolute;
+	left: 25%;
+	text-align: center;
+	background-color: #ADA96E;
+	margin-bottom: 10%;
+}
+
+.indexh1 {
+	text-decoration: underline;
+	font-size: 45px;
+	text-shadow: 1px 1px 0px black;
+	color: #800517;
+}
+
+.search-box {
+	float: right;
+	margin-right: 5%;
+}
+
+.add-new {
+	float: left;
+	margin-left: 5%;
 	
 }
+
+.search-words {
+	font-size: 25px;
+	color: white;
+}
+
+.index-info {
+	border: 2px solid black;
+	border-left: none;
+	border-right: none;
+	border-bottom: none;
+
+}
+
+.details-button {
+	margin-bottom: 3%;
+}
+
+.index-label {
+	font-size: 20px;
+	font-weight: bold;
+	color: black;
+}
+
+.index-words {
+	font-size: 20px;
+	color: #7D1B7E;
+}
+
+
+
+
+
+
+
+
+
