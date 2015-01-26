@@ -28,6 +28,12 @@
      </div>
 </div>
 
+<% if @app.errors.any? %>
+        <div class="alert alert-danger edit-errors text-center" role="alert">
+            <%= @app.errors.full_messages.to_sentence %><br>
+        </div>
+        <% end %>
+
 </body>
 
 

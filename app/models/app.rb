@@ -11,6 +11,7 @@ class App
   validates :file_name, presence: {message: "must be filled"}  
   validates :file_name, uniqueness: {message: "already taken"}
   validates :location, presence: {message: "must be filled"}
+  validates :description, presence: {message: "must be filled"}
 
   belongs_to :user
 
