@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+gem 'mongoid', '~> 4.0.0'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -39,10 +40,11 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  gem "bullet"
+  
 end
 
 
-gem 'mongoid', '~> 4.0.0'
 gem 'bootstrap-sass', '~> 3.3.1'
 group :production do
   gem 'rails_12factor'
