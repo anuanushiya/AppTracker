@@ -8,13 +8,9 @@
 }
 
 .edit-box {
-	border: 2px solid black;
+	border: 8px solid gold;
 	background-color: #3BB9FF;
-	position: absolute;
-	top: 10%;
-	left: 35%;
-	width: 30%;
-	text-align: center;
+	border-style: ridge;
 }
 
 .edith1 {
@@ -32,14 +28,11 @@
 }
 
 .edit-field {
-	width: 70%;
 	font-size: 20px;
-	margin-left: 15%;
-
 }
 
 .edit-end {
-	margin-bottom: 5%;
+	margin-bottom: 20px;
 	font-size: 20px;
 }
 
@@ -52,12 +45,7 @@
 .edit-errors {
 	color: black;
 	font-size: 20px;
-	width: 50%;
-	position: absolute;
-	left: 23%;
-	bottom: 0.01%;
 	border: 2px solid red;
-
 }
 
 

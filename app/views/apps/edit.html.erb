@@ -1,38 +1,48 @@
 <body class="edit-body">
 
-    <div class="edit-box">
-        <h1 class="edith1">Edit this file</h1>
+<div class="container">
+<div class="row">
 
+    <div class="edit-box col-sm-6 col-sm-offset-3">
+        <h1 class="edith1 text-center">Edit this file</h1><br>
+        <div class="col-sm-9 col-sm-offset-2">
         <%= form_for @app do |x| %>
-        <%= x.text_field :file_name, class: 'form-control edit-field', placeholder: 'file name' %>
-        <%= x.date_field :date_created, class: 'form-control edit-field', placeholder: 'date created' %>
-        <%= x.text_field :location, class: 'form-control edit-field', placeholder: 'file location' %>
-        <%= x.text_area :description, class: 'form-control edit-field', placeholder: 'description' %>
-        <%= x.text_area :reference, class: 'form-control edit-field', placeholder: 'reference' %>
+        <%= x.text_field :file_name, class: 'form-control edit-field', placeholder: 'file name' %><br>
+        <%= x.date_field :date_created, class: 'form-control edit-field', placeholder: 'date created' %><br>
+        <%= x.text_field :location, class: 'form-control edit-field', placeholder: 'file location' %><br>
+        <%= x.text_area :description, class: 'form-control edit-field', placeholder: 'description' %><br>
+        <%= x.text_area :reference, class: 'form-control edit-field', placeholder: 'reference' %><br>
         <%= x.fields_for :deploy do |origin_form| %>
-        <h2 class="edith2">Deployment Info: </h2>
-        <%= origin_form.text_field :platform_used, class: 'form-control edit-field', placeholder: 'platform used to deploy' %>
-        <%= origin_form.date_field :deployment_date, class: 'form-control edit-field', placeholder: 'date deployed' %>
+
+        <h2 class="edith2 text-center">Deployment Info: </h2>
+        <%= origin_form.text_field :platform_used, class: 'form-control edit-field', placeholder: 'platform used to deploy' %><br>
+        <%= origin_form.date_field :deployment_date, class: 'form-control edit-field', placeholder: 'date deployed' %><br>
         <%= origin_form.text_field :deployed_name, class: 'form-control edit-field', placeholder: 'deployed app link' %><br>
 
         <% end %>
 
+        <div class="text-center">
         <%= button_tag(type: 'submit', class: "btn btn-default new-button") do %>
         <p>Edit File</p>
         <% end %>
+        </div>
 
         <% end %>
-        <br><div class="edit-end">
+        <br><div class="edit-end text-center">
         <%= link_to "Delete this file", :app, method: :delete, data: {confirm: "Are you sure you want to delete this file information?"}, class: "btn btn-danger edit-button" %>
         <%= link_to "Back to App List", apps_path, class: "btn btn-success edit-button" %>
     </div>
 </div>
 
-<% if @app.errors.any? %>
+<% if @app.errors.any? %><!-- error div -->
 <div class="alert alert-danger edit-errors text-center" role="alert">
     <%= @app.errors.full_messages.to_sentence %><br>
 </div>
 <% end %>
+</div>
+
+</div><!-- end of row -->
+</div><!-- end of grid container -->
 
 </body>
 
