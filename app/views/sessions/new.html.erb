@@ -1,11 +1,16 @@
 <body class="login-body">
 
-	<h1 class="loginh1">Welcome Back!</h1><br><br>
-	<h2 class="loginh2">Login</h2>
+<div class="container"><br><br><!-- start of grid container -->
 
+<div class="row">
+	<h1 class="loginh1 text-center">Welcome Back!</h1><br><br>
+	<h2 class="loginh2 text-center">Login</h2>
+</div><br><br>
 
-	<div class="login-box">
-		<div class="form-group">
+<div class="row"><!-- start login row -->
+
+	<div class="text-center form-group col-sm-4 col-sm-offset-4">
+
 			<% flash.each do |key, value| %>
 			<div class="alert alert-danger flash" role="alert">
 				<%= value %>
@@ -13,13 +18,18 @@
 			<% end %>
 			<%= form_for :user do |f| %>
 
-			<%= f.text_field :email, class: 'form-control login-form', placeholder: 'enter your email' %><br>
-			<%= f.password_field :password, class: 'form-control login-form', placeholder: 'password' %><br>
+			<%= f.text_field :email, class: 'form-control login-form text-center', placeholder: 'enter your email' %><br>
+			<%= f.password_field :password, class: 'form-control login-form text-center', placeholder: 'password' %><br>
+
 			<%= button_tag(type: 'submit', class: "btn btn-primary btn-login") do %>
 			<p class="submit-login">Log Me In!</p>
 			<% end %>
 
 			<% end %>
-		</div>
-	</div>
+
+		</div><!-- end login form div-->
+
+	</div><!-- end login row -->
+
+	</div><!-- end of grid container -->
 </body>

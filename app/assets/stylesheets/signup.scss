@@ -6,11 +6,6 @@
 
 }
 
-.sign-up { /*
-	position: absolute;
-	bottom: 15%;
-	left: 30%; */
-}
 #sign-uph1 {
 	font-size: 50px;
 	color: white;
@@ -23,9 +18,8 @@
 	font-size: 20px;	
 }
 
-.title { /*
-	position: absolute;
-	top: 10%; */
+.title { 
+
 	font-size: 50px;
 	text-shadow: 2px 2px 0px red;
 
@@ -51,24 +45,17 @@
 	font-size: 35px;
 	color: white;
 	text-shadow: 1px 1px 0px black;
-	}
+}
 
 #welcome-div {
 	border: 2px solid black;
 	background-color: #026FA7;
-	/*
-	position: absolute;
-	top: 25%; 
-	*/
+
 }
 
 .error {
 	font-size: 20px;
 	color: black; 
-	/*
-	position: absolute;
-	bottom: 5%;
-	margin-left: 5%; */
 	border: 2px solid red;
 }
 

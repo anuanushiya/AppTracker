@@ -1,48 +1,62 @@
 
 
 <body class="users-new">
-<div class="container-fluid"><!-- beginning of page container -->
-<div class="row">
-<div class="col-sm-12">
-	<h1 class="text-center title"><b class="apptracker">AppTracker</b>, the tool every developer should have!</h1>
-	</div>
-</div><br><!-- end of title row -->
 
-<div class="row">
-	<div id="welcome-div" class="col-sm-12">
-		<h3 class="welcome text-center">Welcome to AppTracker, the tool that helps you keep track of your application files from creation to deployment!</h3 >
-		</div>
-</div><br>
-
-
-		<% if @user.errors.any? %>
-		<div class="row">
-		<div class="alert alert-danger error col-sm-12" role="alert">
-			<%= @user.errors.full_messages.to_sentence %><br>
-		</div>
-		</div>
-		<% end %>
+	<div class="container-fluid"><!-- beginning of page container -->
 
 		<div class="row">
-		<div class="sign-up col-sm-8 col-sm-offset-2 text-center">
-			<h1 id="sign-uph1">Sign up free to use this site!</h1><br>
+			<div class="col-sm-12">
+				<h1 class="text-center title"><b class="apptracker">AppTracker</b>, the tool every developer should have!</h1>
+			</div>
+		</div><br><!-- end of title row -->
 
-		<%= form_for :user, url: "/signup" do |f| %>
-			<div class="form-group col-sm-10 col-sm-offset-2">
-				<%= f.text_field :name, class: 'form-control sign-form text-center', placeholder: 'enter your name' %><br>
-				<%= f.text_field :email, class: 'form-control sign-form text-center', placeholder: 'enter your email' %><br>
-				<%= f.password_field :password, class: 'form-control sign-form text-center', placeholder: 'password' %><br>
-				<%= f.password_field :password_confirmation, class: 'form-control sign-form text-center', placeholder: 'confirm your password' %><br></br>
+		<div class="row">
+
+			<div id="welcome-div" class="col-sm-12">
+				<h3 class="welcome text-center">Welcome to AppTracker, the tool that helps you keep track of your application files from creation to deployment!</h3 >
 				</div>
 
-				<%= button_tag(type: 'submit', class: "btn btn-primary") do %>
-				<p class="submit-signup">Sign Me Up!</p>
-				<% end %>
+			</div><br>
 
-				<% end %>
+
+			<% if @user.errors.any? %>
+
+			<div class="row">
+				<div class="alert alert-danger error col-sm-12" role="alert">
+					<%= @user.errors.full_messages.to_sentence %><br>
+				</div>
 			</div>
-		</div>
+			<% end %>
+
+			<div class="row">
+
+				<div class="col-sm-8 col-sm-offset-2 text-center">
+
+					<h1 id="sign-uph1">Sign up free to use this site!</h1><br>
+
+					<%= form_for :user, url: "/signup" do |f| %>
+
+					<div class="form-group col-sm-10 col-sm-offset-2">
+
+						<%= f.text_field :name, class: 'form-control sign-form text-center', placeholder: 'enter your name' %><br>
+
+						<%= f.text_field :email, class: 'form-control sign-form text-center', placeholder: 'enter your email' %><br>
+
+						<%= f.password_field :password, class: 'form-control sign-form text-center', placeholder: 'password' %><br>
+
+						<%= f.password_field :password_confirmation, class: 'form-control sign-form text-center', placeholder: 'confirm your password' %><br></br>
+					</div>
+
+					<%= button_tag(type: 'submit', class: "btn btn-primary") do %>
+					<p class="submit-signup">Sign Me Up!</p>
+					<% end %>
+
+					<% end %>
+				</div>
+
+			</div>
+
 		</div><!-- end of sign up div -->
-		</div><!-- end of sign up row -->
-		</div><!-- end of container for page -->
-	</body>
+	</div><!-- end of sign up row -->
+</div><!-- end of container for page -->
+</body>
