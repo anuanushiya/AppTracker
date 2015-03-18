@@ -8,12 +8,9 @@
 }
 
 .app-infobox {
-	border: 2px solid black;
+	border: 8px solid #1F45FC;
+  border-style: inset;
 	background-color: #E5E4E2;
-	width: 40%;
-	position: absolute;
-	top: 10%;
-	left: 30%;
 }
 
 
@@ -42,8 +39,7 @@
 }
 
 .buttons-box {
-	margin-left: 15%;
-	margin-bottom: 5%;
+	margin-bottom: 15px;
 }
 
 
