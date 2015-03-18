@@ -9,10 +9,6 @@
 
 .index-box {
 	border: 10px solid black;
-	width: 48%;
-	position: absolute;
-	left: 25%;
-	text-align: center;
 	background-color: #ADA96E;
 	margin-bottom: 10%;
 }
@@ -25,18 +21,17 @@
 }
 
 .search-box {
-	float: right;
-	margin-right: 5%;
+	margin-left: 10px;
 }
 
 .add-new {
-	float: left;
+	font-size: 17px;
 	margin-left: 5%;
 	
 }
 
 .search-words {
-	font-size: 25px;
+	font-size: 28px;
 	color: white;
 	text-shadow: 1px 1px 0px black;
 }
@@ -51,6 +46,7 @@
 
 .details-button {
 	margin-bottom: 3%;
+	font-size: 17px;
 }
 
 .index-label {
@@ -64,9 +60,14 @@
 	color: #151B8D;
 }
 
+.search-button {
+	margin-left: 15px;
+	font-size: 17px;
+}
 
-
-
+.search-field {
+	font-size: 17px;
+}
 
 
 

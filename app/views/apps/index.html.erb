@@ -1,27 +1,40 @@
 <body class="index-body">
 
-	<div class="index-box">
-		<h1 class="indexh1">My App Files</h1>
+	<div class="container"><!-- start of grid container -->
+		<div class="row"><!-- start of index row -->
+
+			<div class="index-box col-sm-8 col-sm-offset-2 text-center">
+				<h1 class="indexh1">My App Files</h1><br>
+
+				<div class="row">
+
+					<div class="text-center">
+						<%= link_to "Add a new file", new_app_path, class: "btn btn-primary add-new" %>
+					</div><br>
+
+					<div class="text-center">
+						<%= form_tag('/apps', method:"get") do %>
+						<span class="search-words">Search files by name:</span> <span class="search-field"><%= text_field_tag :search%></span>
+						<%= submit_tag "Search", class: "btn btn-default search-button"  %>
+						<% end %>
+
+					</div>
+					
+				</div><br><!-- end of title row -->
 
 
-		<%= link_to "Add a new file", new_app_path, class: "btn btn-primary add-new" %>
-		<div class="search-box">
-			<%= form_tag('/apps', method:"get") do %>
-			<span class="search-words">Search files by name:</span> <%= text_field_tag :search %>
-			<%= submit_tag "Search", class: "btn btn-default search-button"  %>
-			<% end %>
-		</div><br><br>
+				<% @apps.each do |app| %>
+				<div class="index-info">
+					<p class="index-words"><u class="index-label">File Name:</u> <%= app.file_name %></p>
+					<p class="index-words"><u class="index-label">Description:</u> <%= app.description %></p>
+					<%= link_to "File Details", app_path(app), class: "btn btn-success details-button"  %><br>
+					<% end %>
+				</div>
 
+			</div>
 
-		<% @apps.each do |app| %>
-		<div class="index-info">
-			<p class="index-words"><u class="index-label">File Name:</u> <%= app.file_name %></p>
-			<p class="index-words"><u class="index-label">Description:</u> <%= app.description %></p>
-			<%= link_to "File Details", app_path(app), class: "btn btn-success details-button"  %><br>
-			<% end %>
-		</div>
-
-	</div>
+		</div><!-- end of index row -->
+	</div><!-- end of grid container -->
 
 </body>
 
