@@ -14,55 +14,23 @@
 	text-decoration: underline;
 	font-family: cursive;
 	font-size: 60px;
-	position: absolute;
-	left: 30%;
 	color: gold;
 	text-shadow: 2px 2px 0px black;
 }
 
-.first-line {
-	position: absolute;
-	bottom: 60%;
-	width: 40%;
-	margin-left: 33%;
-}
-
-.second-line {
-	position: absolute;
-	bottom: 40%;
-	width: 40%;
-	margin-left: 35%;
-}
-
-.text_area {
-	width: 40% !important;
+.text_area { 
+	width: 70% !important;
 	font-size: 20px;
 	color: black;
 }
 
-.third-line {
-	position: absolute;
-	bottom: 10%;
-	width: 40%;
-	margin-left: 33%;
-}
-
 .appnewh2 {
-	font-size: 35px;
+	font-size: 40px;
 	text-decoration: underline;
 	font-family: cursive;
 	text-shadow: 2px 2px 0px black;
 	font-weight: bold;
 	color: gold;
-}
-
-.end-form {
-	position: absolute;
-	bottom: 5%;
-	width: 40%;
-	margin-left: 33%;
-
-
 }
 
 .new-button {
@@ -73,18 +41,19 @@
 
 .add-new-errors {
 	color: black;
-	font-size: 20px;
-	width: 50%;
-	position: absolute;
-	left: 17%;
-	bottom: 0.01%;
-	border: 2px solid red;
+	font-size: 20px; 
+	border: 2px solid red; 
 
 }
 
+.button-div {
+	margin-bottom: 20px;
+}
 
-
-
+.add-form {
+	width: 60%;
+	font-size: 20px;
+}
 
 
 

@@ -1,51 +1,62 @@
 <body class="addapp-body">
 
-	
-	<h1 class="addapph1">Add a New File</h1>
+	<div class="container"><!-- start of grid container -->
 
-	
+		<h1 class="addapph1 text-center">Add a New File</h1>
 
-	<%= form_for @app do |x| %>
+		<div class="row">
+			<div class="col-sm-7 col-sm-offset-4 form-group">
 
-	
-	
-	<div class="form-group">
-		<div class="first-line">
-			
-			<%= x.text_field :file_name, class: 'form-control sign-form', placeholder: 'file name' %><br>
-			<%= x.date_field :date_created, class: 'form-control sign-form', placeholder: 'date created' %><br>
-			<%= x.text_field :location, class: 'form-control sign-form', placeholder: 'file location' %><br><br>
-		</div><br>
-		<div class="second-line">
-			<%= x.text_area :description, class: 'form-control text_area', placeholder: 'description' %><br>
-			<%= x.text_area :reference, class: 'form-control text_area', placeholder: 'reference' %><br>
-		</div><br><br>
-		
-		<%= x.fields_for :deploy do |origin_form| %><br>
-		<div class="third-line">
-			<h2 class="appnewh2">Deployment Info: </h2><br>
-			<%= origin_form.text_field :platform_used, class: 'form-control sign-form', placeholder: 'platform used to deploy' %><br>
-			<%= origin_form.date_field :deployment_date, class: 'form-control sign-form', placeholder: 'date deployed' %><br>
-			<%= origin_form.text_field :deployed_name, class: 'form-control sign-form', placeholder: 'deployed app link' %><br>
-		</div>
+				<%= form_for @app do |x| %>
+				
+				<%= x.text_field :file_name, class: 'form-control add-form text-center', placeholder: 'file name' %><br>
+				<%= x.date_field :date_created, class: 'form-control add-form text-center', placeholder: 'date created' %><br>
+				<%= x.text_field :location, class: 'form-control add-form text-center', placeholder: 'file location' %><br><br>
 
-		<% end %>
-		<div class="end-form">
-			<%= button_tag(type: 'submit', class: "btn btn-primary new-button") do %>
-			<p>Add File</p>
-			<% end %>
-			<%= link_to "Back to App List", apps_path, class: "btn btn-success new-button" %><br>
-		</div>
+				<div class="col-sm-8 col-sm-offset-1 form-group">
+					<%= x.text_area :description, class: 'form-control text_area text-center', placeholder: 'description' %><br>
+					<%= x.text_area :reference, class: 'form-control text_area text-center', placeholder: 'reference' %>
+				</div>
 
+			</div>
+		</div><!-- end of form row -->
+
+		<!-- errors div -->
 		<% if @app.errors.any? %>
 		<div class="alert alert-danger add-new-errors text-center" role="alert">
 			<%= @app.errors.full_messages.to_sentence %><br>
 		</div>
 		<% end %>
 
+
+		<div class="row">
+			<h2 class="appnewh2 text-center">Deployment Info: </h2><br>
+			<div class="col-sm-7 col-sm-offset-4 text-center form-group">
+				
+				<%= x.fields_for :deploy do |origin_form| %>
+				
+				<%= origin_form.text_field :platform_used, class: 'form-control add-form text-center', placeholder: 'platform used to deploy' %><br>
+				<%= origin_form.date_field :deployment_date, class: 'form-control add-form text-center', placeholder: 'date deployed' %><br>
+				<%= origin_form.text_field :deployed_name, class: 'form-control add-form text-center', placeholder: 'deployed app link' %><br>
+				<% end %>
+
+			</div>
+		</div><!-- end of second form row -->
+		
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2 text-center button-div">
+				<%= button_tag(type: 'submit', class: "btn btn-primary new-button") do %>
+				<p>Add File</p>
+				<% end %>
+				<%= link_to "Back to App List", apps_path, class: "btn btn-success new-button" %><br>
+			</div>
+		</div><!-- end of button row -->
+
+
+		
 	</div>
 	<% end %>
 	
-
+</div><!-- end of grid container -->
 
 </body>
