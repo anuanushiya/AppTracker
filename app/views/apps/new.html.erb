@@ -5,6 +5,7 @@
 		<h1 class="addapph1 text-center">Add a New File</h1>
 
 		<div class="row">
+
 			<div class="col-sm-7 col-sm-offset-4 form-group">
 
 				<%= form_for @app do |x| %>
@@ -42,21 +43,20 @@
 
 			</div>
 		</div><!-- end of second form row -->
-		
+		</div>
 		<div class="row">
 			<div class="col-sm-8 col-sm-offset-2 text-center button-div">
 				<%= button_tag(type: 'submit', class: "btn btn-primary new-button") do %>
 				<p>Add File</p>
 				<% end %>
 				<%= link_to "Back to App List", apps_path, class: "btn btn-success new-button" %><br>
-			</div>
+
 		</div><!-- end of button row -->
 
 
 		
 	</div>
 	<% end %>
-	
 </div><!-- end of grid container -->
 
 </body>
