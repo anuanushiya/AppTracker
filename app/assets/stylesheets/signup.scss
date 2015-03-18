@@ -1,31 +1,31 @@
 
 .users-new {
 	padding-left: 20px;
-	background-image: url('matrix.gif');
+	background-image: url('file-cabinets.jpg');
 	color: #DDDEE0;
 
 }
 
-.sign-up {
+.sign-up { /*
 	position: absolute;
 	bottom: 15%;
-	left: 30%;
+	left: 30%; */
 }
 #sign-uph1 {
 	font-size: 50px;
-	color: #BCE5FA;
+	color: white;
+
 }
 
-.loggin-btn {
-	float: right;
+.loggin-btn { 
 	margin-right: 15px;
 	margin-top: 10px;
 	font-size: 20px;	
 }
 
-.title {
+.title { /*
 	position: absolute;
-	top: 10%; 
+	top: 10%; */
 	font-size: 50px;
 	text-shadow: 2px 2px 0px red;
 
@@ -37,7 +37,7 @@
 }
 
 .sign-form {
-	width: 50%;
+	width: 70%;
 	font-size: 20px;
 	color: black;
 }
@@ -56,17 +56,19 @@
 #welcome-div {
 	border: 2px solid black;
 	background-color: #026FA7;
+	/*
 	position: absolute;
 	top: 25%; 
-	
+	*/
 }
 
 .error {
 	font-size: 20px;
-	color: black;
+	color: black; 
+	/*
 	position: absolute;
 	bottom: 5%;
-	margin-left: 5%;
+	margin-left: 5%; */
 	border: 2px solid red;
 }
 

@@ -8,7 +8,8 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div>
+
+<div class="text-right">
 <button type="button" class="btn btn-default loggin-btn">
 <% if current_user %> <!-- login button -->
 	<%= "Logged in as " + current_user.name + ' | ' %><%= link_to 'Logout', logout_path %>
