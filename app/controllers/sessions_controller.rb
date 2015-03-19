@@ -1,7 +1,7 @@
 class SessionsController < ApplicationController
 
 	def new
-
+		redirect_to  apps_path if current_user
 	end
 
 	def create # creates sessions for users 

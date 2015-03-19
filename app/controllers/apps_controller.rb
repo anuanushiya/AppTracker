@@ -4,7 +4,7 @@ class AppsController < ApplicationController
 	def index 
 	  if params[:search] && params[:search].strip !="" # search query code
 	  	@apps = App.where(file_name: Regexp.new(".*#{params[:search]}.*", Regexp::IGNORECASE), user_id: current_user.id)
-
+	  	
 	  else 
 
 
