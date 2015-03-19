@@ -44,7 +44,6 @@ group :development, :test do
   
 end
 
-
 gem 'bootstrap-sass', '~> 3.3.1'
 group :production do
   gem 'rails_12factor'
