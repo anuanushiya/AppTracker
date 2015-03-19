@@ -23,7 +23,7 @@
                     <h2 class="edith2 text-center">Deployment Info: </h2>
                     <%= origin_form.text_field :platform_used, class: 'form-control edit-field', placeholder: 'platform used to deploy' %><br>
                     <%= origin_form.date_field :deployment_date, class: 'form-control edit-field', placeholder: 'date deployed' %><br>
-                    <%= origin_form.text_field :deployed_name, class: 'form-control edit-field', placeholder: 'deployed app link' %><br>
+                    <%= origin_form.url_field :deployed_name, class: 'form-control edit-field', placeholder: 'deployed app link' %><br>
 
                     <% end %>
 

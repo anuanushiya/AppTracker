@@ -8,23 +8,29 @@
 				<% if @app.date_created %>
 				<p class="text-center show-info"><u class="show-label">Date Created:</u> <%= @app.date_created.strftime("%-m-%-d-%Y")%></p>
 				<% end %><br>
+
 				<% if @app.location %>
 				<p class="text-center show-info"><u class="show-label">Location:</u> <%= @app.location %></p>
 				<% end %><br>
+
 				<% if @app.description !="" %>
 				<p class="text-center show-info"><u class="show-label">Description:</u> <%= @app.description %></p>
 				<% end %><br>
+
 				<% if @app.reference !="" %>
 				<p class="text-center show-info"><u class="show-label">Reference:</u> <%= link_to @app.reference, @app.reference  %></p>
 				<% end %><br>
+
 				<% if @app.deploy.platform_used !="" %> 
 				<p class="text-center show-info"><u class="show-label">Deployment Platform:</u> <%= @app.deploy.platform_used %></p> 
 				<% end %><br>
+
 				<% if @app.deploy.deployment_date %>
 				<p class="text-center show-info"><u class="show-label">Deployed on:</u> <%= @app.deploy.deployment_date.strftime("%-m-%-d-%Y") %></p> 
 				<% end %><br>
+
 				<% if @app.deploy.deployed_name !="" %>
-				<p class="text-center show-info"><u class="show-label">App Link:</u> <%= link_to @app.deploy.deployed_name, @app.deploy.deployed_name %></p>
+				<p class="text-center show-info"><u class="show-label">App Link:</u> <%= link_to @app.deploy.deployed_name, url_for(@app.deploy.deployed_name), :target => '_blank' %></p>
 				<% end %><br>
 
 				<div class="buttons-box text-center"><!-- button divs -->
