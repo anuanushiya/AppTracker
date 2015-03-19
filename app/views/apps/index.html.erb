@@ -9,7 +9,7 @@
 				<div class="row">
 
 					<div class="text-center">
-						<%= link_to "Add a new file", new_app_path, class: "btn btn-primary add-new" %>
+						<%= link_to "Add a new file", new_app_path, class: "btn btn-primary add-new hvr-float-shadow" %>
 					</div><br>
 
 					<div class="text-center">
@@ -27,7 +27,7 @@
 				<div class="index-info">
 					<p class="index-words"><u class="index-label">File Name:</u> <%= app.file_name %></p>
 					<p class="index-words"><u class="index-label">Description:</u> <%= app.description %></p>
-					<%= link_to "File Details", app_path(app), class: "btn btn-success details-button"  %><br>
+					<%= link_to "File Details", app_path(app), class: "btn btn-success details-button hvr-float-shadow"  %><br>
 					<% end %>
 				</div>
 

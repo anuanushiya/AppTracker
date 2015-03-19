@@ -28,15 +28,15 @@
                     <% end %>
 
                     <div class="text-center">
-                        <%= button_tag(type: 'submit', class: "btn btn-default new-button") do %>
+                        <%= button_tag(type: 'submit', class: "btn btn-default new-button hvr-float-shadow") do %>
                         <p>Edit File</p>
                         <% end %>
                     </div>
                     
                     <% end %>
                     <br><div class="edit-end text-center"> <!-- button divs -->
-                    <%= link_to "Delete this file", :app, method: :delete, data: {confirm: "Are you sure you want to delete this file information?"}, class: "btn btn-danger edit-button" %>
-                    <%= link_to "Back to App List", apps_path, class: "btn btn-success edit-button" %>
+                    <%= link_to "Delete this file", :app, method: :delete, data: {confirm: "Are you sure you want to delete this file information?"}, class: "btn btn-danger edit-button hvr-float-shadow" %>
+                    <%= link_to "Back to App List", apps_path, class: "btn btn-success edit-button hvr-float-shadow" %>
                 </div><!-- button divs -->
             </div><!-- form div -->
 
